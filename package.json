@@ -1,0 +1,24 @@
+{
+  "name": "xizero-wiki",
+  "version": "1.0.0",
+  "description": "A simple wiki site project",
+  "main": "xizero.wiki.js",
+  "scripts": {
+    "start": "http-server -a 0.0.0.0 -p 50969",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "xizero",
+    "wiki"
+  ],
+  "author": "xizero",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^0.10.0",
+    "marked": "^0.3.6"
+  },
+  "repository": { 
+    "type" : "git",
+     "url" : "https://github.com/f12998765/xizero-wiki"
+  }
+}
