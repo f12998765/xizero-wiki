@@ -1,8 +1,7 @@
 {
   "name": "xizero-wiki",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple wiki site project",
-  "main": "xizero.wiki.js",
   "scripts": {
     "start": "http-server -a 0.0.0.0 -p 50969",
     "test": "echo \"Error: no test specified\" && exit 1"

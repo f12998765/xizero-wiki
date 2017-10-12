@@ -23,8 +23,14 @@ body, html,p {
 #con {
   width: 72%;
   margin: 0 auto;
+  padding-bottom: 5rem;
 }
 
 a {
   color: #666;
+}
+
+img{
+  margin: 0 auto;
+  display: block;
 }
