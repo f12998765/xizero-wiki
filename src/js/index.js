@@ -1,6 +1,5 @@
 url = window.location.search.substr(1)
-console.log(url)
-if (url == null || url=="" || url == "/")
+if (url == null || url == "" || url == "/" || !(new RegExp("^.*?\.md$").test(url)))
   url = "README.md"
 
 marked.setOptions({
@@ -14,19 +13,16 @@ marked.setOptions({
   smartypants: false
 });
 marked.setOptions({
-  highlight: function(code) {
+  highlight: function (code) {
     return hljs.highlightAuto(code).value;
   }
 });
 
 fetch("./" + url)
-  .then(function(response) {
-    if (response.status != 200)
-      window.location.href='./'
-    else {
+  .then(function (response) {
+    if (response.ok)
       return response.text()
-    }
-
-  }).then(function(data) {
+    document.getElementById('con').innerHTML = "<div id='e404'>404</div>"
+  }).then(function (data) {
     document.getElementById('con').innerHTML = marked(data)
   })
