@@ -1,6 +1,6 @@
 {
   "name": "xizero-wiki",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple wiki site project",
   "scripts": {
     "start": "http-server -a 0.0.0.0 -p 50969",
