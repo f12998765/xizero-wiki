@@ -1,6 +1,6 @@
 {
   "name": "xizero-wiki",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A simple wiki site project",
   "scripts": {
     "start": "http-server -a 0.0.0.0 -p 50969",
@@ -15,8 +15,8 @@
   "dependencies": {
     "http-server": "^0.10.0"
   },
-  "repository": { 
-    "type" : "git",
-     "url" : "https://github.com/f12998765/xizero-wiki"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/f12998765/xizero-wiki"
   }
 }
