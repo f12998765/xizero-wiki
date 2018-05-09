@@ -24,5 +24,10 @@ fetch("./" + url)
       return response.text()
     document.getElementById('con').innerHTML = "<div id='e404'>404</div>"
   }).then(function (data) {
-    document.getElementById('con').innerHTML = marked(data)
+    if (config.get("is_img_url")) {
+      var url = config.get("img_url");
+      var re = /!\[.*\]\((\.img\/\S+)\)/g;
+      data = data.replace(re, "![]\(" + url + "$1\)");
+    }
+    document.getElementById('con').innerHTML = marked(data);
   })

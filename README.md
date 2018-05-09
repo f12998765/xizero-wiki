@@ -55,3 +55,6 @@ npm start
 
 For mor information on this license, [click here](https://github.com/f12998765/xizero-wiki/blob/master/LICENSE).
 
+## Test
+
+[@test link](?Test.md)
