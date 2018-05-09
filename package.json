@@ -13,8 +13,7 @@
   "author": "xizero",
   "license": "MIT",
   "dependencies": {
-    "http-server": "^0.10.0",
-    "marked": "^0.3.6"
+    "http-server": "^0.10.0"
   },
   "repository": { 
     "type" : "git",
