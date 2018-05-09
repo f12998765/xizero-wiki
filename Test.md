@@ -2,4 +2,4 @@
 
 ## Test img
 
-![](.img/regex.svg)
+![](.img/test.png)

@@ -1,3 +1,7 @@
+var flag = true;
+if (typeof config == "undefined") {
+  flag = false;
+}
 url = window.location.search.substr(1)
 if (url == null || url == "" || url == "/" || !(new RegExp("^.*?\.md$").test(url)))
   url = "README.md"
@@ -24,7 +28,7 @@ fetch("./" + url)
       return response.text()
     document.getElementById('con').innerHTML = "<div id='e404'>404</div>"
   }).then(function (data) {
-    if (config.get("is_img_url")) {
+    if (flag && config.has("img_url")) {
       var url = config.get("img_url");
       var re = /!\[.*\]\(.*(\.img\/\S+)\)/g;
       data = data.replace(re, "![]\(" + url + "$1\)");
