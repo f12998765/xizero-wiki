@@ -26,7 +26,7 @@ fetch("./" + url)
   }).then(function (data) {
     if (config.get("is_img_url")) {
       var url = config.get("img_url");
-      var re = /!\[.*\]\((\.img\/\S+)\)/g;
+      var re = /!\[.*\]\(.*(\.img\/\S+)\)/g;
       data = data.replace(re, "![]\(" + url + "$1\)");
     }
     document.getElementById('con').innerHTML = marked(data);
