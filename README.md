@@ -41,7 +41,7 @@ A blank file or like examples.
 ```js
 var config=new Map([
     //If you use github to store your pictures, and make sure to display them everywhere
-    ["img_url","https://raw.githubusercontent.com/{user_name}/{[project_name]}/master/"],
+    ["img_url","https://cdn.rawgit.com/{user_name}/{[project_name]}/master/"],
 ]);
 ```
 
@@ -51,7 +51,6 @@ a markdown file eg:
 ```md
 ![](../.img/name.png)
 ```
-> Possible svg image display is abnormal
 
 Open the directory in a http server.
 
