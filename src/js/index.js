@@ -32,6 +32,8 @@ fetch("./" + url)
       var url = config.get("img_url");
       var re = /!\[.*\]\(.*(\.img\/\S+)\)/g;
       data = data.replace(re, "![]\(" + url + "$1\)");
+      var re = /!\[.*\]\(.*(\.img\/\S+\.svg)\)/g;
+      data = data.replace(re, "["+url+"$1]\(" + url + "$1\)");
     }
     document.getElementById('con').innerHTML = marked(data);
   })
