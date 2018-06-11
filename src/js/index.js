@@ -18,7 +18,7 @@ marked.setOptions({
   pedantic: false,
   sanitize: false,
   smartLists: true,
-  smartypants: false
+  smartypants: true
 });
 marked.setOptions({
   highlight: function (code) {
@@ -39,5 +39,7 @@ fetch(file)
       var re = /!\[.*\]\(.*(\.img\/\S+)\)/g;
       data = data.replace(re, "![]\(" + url + "$1\)");
     }
-    document.getElementById('con').innerHTML = marked(data);
+    var con = document.getElementById('con');
+    con.classList.add("markdown-body");
+    con.innerHTML = marked(data);
   })

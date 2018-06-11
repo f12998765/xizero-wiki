@@ -4,30 +4,33 @@ body, html,p {
 }
 
 .head {
-  width: 72%;
+  width: 100%;
+  box-shadow: 0 2px 5px #eee;
+}
+.head ul{
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
   height: 4rem;
   line-height: 4rem;
-  margin: 0 auto 1rem auto;
+  padding:0 45px;
+  list-style: none;
 }
 
-.head ul {
-  padding: 0;
-  list-style: none;
+.head a{
+  color: #000;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.head a:hover{
+  text-decoration:underline;
 }
 
 .head ul li {
   float: left;
   margin-right: 3rem;
-}
-
-#con {
-  width: 72%;
-  margin: 0 auto;
-  padding-bottom: 5rem;
-}
-
-a {
-  color: #666;
 }
 
 img{
@@ -40,4 +43,18 @@ img{
   margin: 4.04rem;
   font-size: 8.08rem;
   color: #888;
+}
+
+.markdown-body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+}
+
+@media (max-width: 767px) {
+  .markdown-body {
+    padding: 15px;
+  }
 }
