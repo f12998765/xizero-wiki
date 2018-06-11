@@ -1,10 +1,14 @@
 var flag = true;
+var url = "./";
 if (typeof config == "undefined") {
   flag = false;
-}
-url = window.location.search.substr(1)
-if (url == null || url == "" || url == "/" || !(new RegExp("^.*?\.md$").test(url)))
-  url = "README.md"
+} else if (config.has("url"))
+  url = config.get("url");
+
+file = window.location.search.substr(1)
+if (file == null || file == "" || file == "/" || !(new RegExp("^.*?\.md$").test(file)))
+  file = "README.md"
+file = url + file;
 
 marked.setOptions({
   renderer: new marked.Renderer(),
@@ -22,14 +26,16 @@ marked.setOptions({
   }
 });
 
-fetch("./" + url)
+fetch(file)
   .then(function (response) {
     if (response.ok)
       return response.text()
-    document.getElementById('con').innerHTML = "<div id='e404'>404</div>"
+    else {
+      flag = false;
+      return "<div id='e404'>404</div>"
+    }
   }).then(function (data) {
-    if (flag && config.has("img_url")) {
-      var url = config.get("img_url");
+    if (flag) {
       var re = /!\[.*\]\(.*(\.img\/\S+)\)/g;
       data = data.replace(re, "![]\(" + url + "$1\)");
     }
