@@ -8,7 +8,6 @@ if (typeof config == "undefined") {
 file = window.location.search.substr(1)
 if (file == null || file == "" || file == "/" || !(new RegExp("^.*?\.md$").test(file)))
   file = "README.md"
-file = url + file;
 
 marked.setOptions({
   renderer: new marked.Renderer(),
@@ -26,7 +25,7 @@ marked.setOptions({
   }
 });
 
-fetch(file)
+fetch("./"+file)
   .then(function (response) {
     if (response.ok)
       return response.text()
