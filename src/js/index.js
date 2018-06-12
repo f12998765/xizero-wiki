@@ -1,14 +1,11 @@
 var con = document.getElementById('con');
-var loding = document.createElement("div");
-loding.classList.add("loding");
-con.appendChild(loding);
-con.classList.add("loding-body");
+var info = document.createElement("div");
+info.classList.add("loding");
+con.appendChild(info);
+con.classList.add("con-center");
 
-var flag = true;
-var url = "./";
-if (typeof config == "undefined") {
-  flag = false;
-} else if (config.has("url"))
+var url = "";
+if (!typeof config == "undefined"&&config.has("url"))
   url = config.get("url");
 
 file = window.location.search.substr(1)
@@ -35,16 +32,17 @@ fetch("./"+file)
   .then(function (response) {
     if (response.ok)
       return response.text()
-    else {
-      flag = false;
-      return "<div id='e404'>404</div>"
-    }
+    else 
+      throw "404";
   }).then(function (data) {
-    if (flag) {
+    if (url!="") {
       var re = /!\[.*\]\(.*(\.img\/\S+)\)/g;
       data = data.replace(re, "![]\(" + url + "$1\)");
     }
-    con.classList.remove("loding-body");
+    con.classList.remove("con-center");
     con.classList.add("markdown-body");
     con.innerHTML = marked(data);
+  }).catch(error=>{
+    info.classList.remove("loding");
+    info.classList.add("e404");
   })
