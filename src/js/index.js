@@ -39,6 +39,7 @@ fetch("./"+file)
       data = data.replace(re, "![]\(" + url + "$1\)");
     }
     var con = document.getElementById('con');
+    con.classList.remove("loding-body");
     con.classList.add("markdown-body");
     con.innerHTML = marked(data);
   })

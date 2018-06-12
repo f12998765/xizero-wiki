@@ -45,6 +45,22 @@ img{
   color: #888;
 }
 
+.loding-body{
+  width: 100vw;
+  height:  calc(100vh - 4rem - 2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loding-body .loding{
+  width: 160px;
+  height: 160px;
+  background: url("../img/loding.svg") no-repeat;
+  background-size: 100% 100%;
+}
+
+
 .markdown-body {
   box-sizing: border-box;
   min-width: 200px;
@@ -61,3 +77,4 @@ img{
 	  padding:0 15px;
   }
 }
+
