@@ -1,3 +1,9 @@
+var con = document.getElementById('con');
+var loding = document.createElement("div");
+loding.classList.add("loding");
+con.appendChild(loding);
+con.classList.add("loding-body");
+
 var flag = true;
 var url = "./";
 if (typeof config == "undefined") {
@@ -38,7 +44,6 @@ fetch("./"+file)
       var re = /!\[.*\]\(.*(\.img\/\S+)\)/g;
       data = data.replace(re, "![]\(" + url + "$1\)");
     }
-    var con = document.getElementById('con');
     con.classList.remove("loding-body");
     con.classList.add("markdown-body");
     con.innerHTML = marked(data);
