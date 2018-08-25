@@ -50,14 +50,14 @@ img{
 .con-center .loding{
   width: 160px;
   height: 160px;
-  background: url("https://unpkg.com/xizero-wiki/src/img/loding.svg") no-repeat;
+  background: url("https://cdn.rawgit.com/f12998765/xizero-wiki/c789f393/src/img/loding.svg") no-repeat;
   background-size: 100% 100%;
 }
 
 .con-center .e404{
   width: 66vh;
   height: 66vh;
-  background: url("https://unpkg.com/xizero-wiki/src/img/404.png") no-repeat;
+  background: url("https://cdn.rawgit.com/f12998765/xizero-wiki/c789f393/src/img/404.png") no-repeat;
   background-size: 100% 100%;
 }
 

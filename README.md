@@ -73,9 +73,3 @@ npm start
 ## License
 
 For mor information on this license, [click here](https://github.com/f12998765/xizero-wiki/blob/master/LICENSE).
-
-## Test
-
-[@test link 1](?Test.md)
-
-[@test link 2](?Test/Test2.md)
