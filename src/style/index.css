@@ -82,3 +82,91 @@ img{
   }
 }
 
+:root{
+  --so_size:560px;
+}
+.so{
+  width:  var(--so_size);
+  height: 44px;
+  margin: 15vh auto;
+  background-color: #fff;
+  vertical-align: top;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+  transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.so:hover {
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.in{
+  display: inline-block;
+  width: calc(var(--so_size) - 47px - 16px);
+  height: 39px;
+  padding: 5px 0 0 16px;
+}
+.in input{
+  width: 100%;
+  border: none;
+  outline: none;
+  font: 16px arial,sans-serif;
+  line-height: 34px;
+  height: 34px;
+}
+
+.so .sub{
+  float: right;
+  width: 44px;
+  height: 44px;
+  padding: 0 1.5px;
+  background:url("https://cdn.rawgit.com/f12998765/SpeedDial/gh-pages/img/so.svg") no-repeat center center;
+  background-size: 72% 72%;
+  cursor: pointer;
+}
+
+.result{
+  max-width: 890px;
+ margin: 0 auto;
+ padding: 0 45px;
+}
+
+#conut{
+  font-size:12px;
+  color:#aaa;
+  height: 44px;
+  line-height: 44px;
+}
+
+.page{
+  width: clac(100% - 2rem);
+  padding: 1.5rem;
+  margin-bottom:2rem; 
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(61, 58, 58, 0.16), 0 0 0 1px rgba(163, 163, 163, 0.2);
+}
+
+.page_title{
+  font-size: 18px;
+}
+
+.page_title a{
+  text-decoration: none;
+}
+
+.page_title a:hover{
+  text-decoration: underline;
+}
+
+.page_text{
+  font-size: 14px;
+  padding: 10px;
+  box-shadow: 0 2px 2px 0 rgba(165, 147, 147, 0.16);
+  background:#f6f8fa;
+  margin-top:1rem;
+  line-height: 25px;
+}
+
+y{
+  background: yellow;
+}
