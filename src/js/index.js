@@ -66,7 +66,7 @@ function search(parm) {
         if (response.ok) return response.json()
         else throw "404"
       }).then(function (json) {
-        var reg = new RegExp("(" + parm + ")", "g");
+        var reg = new RegExp("(" + parm + ")", "gi");
         var result = '<div class="result"><div id="conut">找到 ' + json.total_count + ' 篇文章</div>';
         for (var i in json.items) {
           result += '<div class="page"><div class="page_title"><a href=?' + json.items[i].path + '>' + json.items[i].name + '</a></div>';
