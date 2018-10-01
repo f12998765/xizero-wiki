@@ -4,7 +4,8 @@ A simple wiki site project.
 
 ## Author
 
-[![](./favicon.ico)](https://github.com/f12998765)
+[<div align=center>![](./favicon.ico)</div>](https://github.com/f12998765)
+
 ## Quick Start
 
 Create an `index.html`.
@@ -24,32 +25,19 @@ Create an `index.html`.
   <div class="head">
     <ul>
       <li><a href="/">Home</a></li>
-      <li><a href="https://github.com/f12998765/xizero-wiki">Github</a></li>
+      <li><a href="/?=">Search</a></li>
+      <li><a href="https://github.com/f12998765">Github</a></li>
     </ul>
   </div>
   <div id="con"></div>
 </body>
-<script type="text/javascript" src="https://unpkg.com/xizero-wiki/lib/xizero.wiki.js"></script>
+<script>
+  var repo = "f12998765/xizero-wiki";
+  var branch = "master";
+</script>
+<script type="text/javascript" src="https://cdn.rawgit.com/f12998765/xizero-wiki/master/lib/xizero.wiki.js"></script>
 
 </html>
-```
-
-And must Create a `config.js`.
-
-A blank file or like examples.
-
-```js
-var config=new Map([
-    //If you use github to store your pictures, and make sure to display them everywhere
-    ["img_url","https://cdn.rawgit.com/{user_name}/{[project_name]}/master/"],
-]);
-```
-
-In your project root directory create a folder for storing pictures `.img` .
-
-a markdown file eg:
-```md
-![](../.img/name.png)
 ```
 
 Open the directory in a http server.
