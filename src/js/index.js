@@ -28,7 +28,7 @@ marked.setOptions({
   }
 });
 
-var parm = window.location.search;
+var parm = decodeURIComponent(window.location.search);
 if (parm.startsWith("?="))
   search(parm.substr(2));
 else
