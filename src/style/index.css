@@ -1,172 +1,181 @@
-body, html,p {
-  margin: 0;
-  padding: 0;
+@media (min-width: 1200px) {
+	:root {
+		--html-font-size: 1rem;
+		--so-size: 48vw;
+		--so-radius: 3px;
+		--so-margin: 20vh;
+	}
+}
+
+html {
+	font-size: var(--html-font-size);
+}
+
+body, html,p,ul,li {
+	margin: 0;
+	padding: 0;
 }
 
 .head {
-  width: 100%;
-  box-shadow: 0 2px 5px #eee;
-}
-.head ul{
-  box-sizing: border-box;
-  min-width: 200px;
-  max-width: 980px;
-  margin: 0 auto;
-  height: 4rem;
-  line-height: 4rem;
-  padding:0 45px;
-  list-style: none;
+	width: 100%;
+	box-shadow: 0 2px 5px #eee;
 }
 
-.head a{
-  color: #000;
-  text-decoration: none;
-  font-size: 1.1rem;
+.head ul {
+	box-sizing: border-box;
+	min-width: 200px;
+	max-width: 980px;
+	margin: 0 auto;
+	height: 3.6rem;
+	line-height: 3.6rem;
+	list-style: none;
 }
 
-.head a:hover{
-  text-decoration:underline;
+.head a {
+	color: #000;
+	text-decoration: none;
+}
+
+.head a:hover {
+	text-decoration: underline;
 }
 
 .head ul li {
-  float: left;
-  margin-right: 3rem;
+	float: left;
+	margin-right: 2rem;
 }
 
-img{
-  margin: 0 auto;
-  display: block;
+img {
+	margin: 0 auto;
+	display: block;
 }
 
-
-.con-center{
-  width: 100vw;
-  height:  calc(100vh - 4rem - 2px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.con-center {
+	width: 100vw;
+	height: calc(100vh - 4rem - 2px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.con-center .loding{
-  width: 160px;
-  height: 160px;
-  background: url("https://cdn.rawgit.com/f12998765/xizero-wiki/c789f393/src/img/loding.svg") no-repeat;
-  background-size: 100% 100%;
+.con-center .loding {
+	width: 48vh;
+	height: 48vh;
+	background: url("https://cdn.jsdelivr.net/gh/f12998765/xizero-wiki/src/img/loding.svg") no-repeat;
+	background-size: 100% 100%;
 }
 
-.con-center .e404{
-  width: 66vh;
-  height: 66vh;
-  background: url("https://cdn.rawgit.com/f12998765/xizero-wiki/c789f393/src/img/404.png") no-repeat;
-  background-size: 100% 100%;
+.con-center .e404 {
+	width: 66vh;
+	height: 66vh;
+	background: url("https://cdn.jsdelivr.net/gh/f12998765/xizero-wiki/src/img/404.png") no-repeat;
+	background-size: 100% 100%;
 }
 
 .markdown-body {
-  box-sizing: border-box;
-  min-width: 200px;
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 45px;
+	box-sizing: border-box;
+	min-width: 200px;
+	max-width: 980px;
+	margin: 1.2rem auto;
 }
 
-@media (max-width: 767px) {
-  .markdown-body {
-    padding: 15px;
-  }
-  .head ul{
-	  padding:0 15px;
-  }
-  .con-center .e404{
-    width: 66vw;
-    height: 66vw;
-  }
+.markdown-body,.head ul,.result {
+	padding: 0 1rem;
 }
 
-:root{
-  --so_size:560px;
+@media (max-width: 1200px) {
+	:root {
+		--so-size: 81vw;
+		--so-radius: 22px;
+		--so-margin: 15vh;
+	}
 }
-.so{
-  width:  var(--so_size);
-  height: 44px;
-  margin: 15vh auto;
-  background-color: #fff;
-  vertical-align: top;
-  border-radius: 2px;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
-  transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+
+.so {
+	width: var(--so-size);
+	height: 44px;
+	margin: var(--so-margin) auto;
+	background-color: #fff;
+	vertical-align: top;
+	border-radius: var(--so-radius);
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+	transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .so:hover {
-  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+	box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
 }
 
-.in{
-  display: inline-block;
-  width: calc(var(--so_size) - 47px - 16px);
-  height: 39px;
-  padding: 5px 0 0 16px;
-}
-.in input{
-  width: 100%;
-  border: none;
-  outline: none;
-  font: 16px arial,sans-serif;
-  line-height: 34px;
-  height: 34px;
+.in {
+	display: inline-block;
+	width: calc(var(--so-size) - 44px);
+	height: 39px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 22px;
 }
 
-.so .sub{
-  float: right;
-  width: 44px;
-  height: 44px;
-  padding: 0 1.5px;
-  background:url("https://cdn.rawgit.com/f12998765/SpeedDial/gh-pages/img/so.svg") no-repeat center center;
-  background-size: 72% 72%;
-  cursor: pointer;
+.in input {
+	width: 100%;
+	border: none;
+	outline: none;
+	font: 16px arial,sans-serif;
+	line-height: 34px;
+	height: 34px;
 }
 
-.result{
-  max-width: 890px;
- margin: 0 auto;
- padding: 0 45px;
+.so .sub {
+	float: right;
+	width: 44px;
+	height: 44px;
+	background: url("https://cdn.jsdelivr.net/gh/f12998765/xizero-wiki/src/img/so.svg") no-repeat center center;
+	background-size: 72% 72%;
+	cursor: pointer;
 }
 
-#conut{
-  font-size:12px;
-  color:#aaa;
-  height: 44px;
-  line-height: 44px;
+.result {
+	box-sizing: border-box;
+	max-width: 980px;
+	margin: 0 auto 3rem auto;
 }
 
-.page{
-  width: clac(100% - 2rem);
-  padding: 1.5rem;
-  margin-bottom:2rem; 
-  border-radius: 2px;
-  box-shadow: 0 2px 2px 0 rgba(61, 58, 58, 0.16), 0 0 0 1px rgba(163, 163, 163, 0.2);
+#conut {
+	font-size: 12px;
+	color: #aaa;
+	height: 44px;
+	line-height: 44px;
 }
 
-.page_title{
-  font-size: 18px;
+.page {
+	width: 100%;
+	padding: 1.5rem 0 2rem 0;
+	border-top: 1px solid #eee;
 }
 
-.page_title a{
-  text-decoration: none;
+.page_title {
+	font-size: 1rem;
 }
 
-.page_title a:hover{
-  text-decoration: underline;
+.page_title a {
+	text-decoration: none;
 }
 
-.page_text{
-  font-size: 14px;
-  padding: 10px;
-  box-shadow: 0 2px 2px 0 rgba(165, 147, 147, 0.16);
-  background:#f6f8fa;
-  margin-top:1rem;
-  line-height: 25px;
+.page_title a:hover {
+	text-decoration: underline;
 }
 
-y{
-  background: yellow;
+.page_text {
+	font-size: 0.8rem;
+	padding: 1rem;
+	border: 1px #e1e4e8 solid;
+	margin-top: 1rem;
+	line-height: 1.5rem;
+}
+
+y {
+	background: yellow;
 }

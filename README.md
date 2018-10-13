@@ -35,7 +35,7 @@ Create an `index.html`.
   var repo = "f12998765/xizero-wiki";
   var branch = "master";
 </script>
-<script type="text/javascript" src="https://cdn.rawgit.com/f12998765/xizero-wiki/master/lib/xizero.wiki.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/f12998765/xizero-wiki/lib/xizero.wiki.js"></script>
 
 </html>
 ```

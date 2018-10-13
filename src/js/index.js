@@ -9,7 +9,7 @@ if (typeof repo == 'undefined')
 if (typeof branch == 'undefined')
   var branch = "master"
 
-var root = "https://cdn.rawgit.com/" + repo + "/" + branch;
+var root = "https://raw.githubusercontent.com/" + repo + "/" + branch;
 
 marked.setOptions({
   renderer: new marked.Renderer(),
@@ -31,12 +31,13 @@ marked.setOptions({
 var parm = decodeURIComponent(window.location.search);
 if (parm.startsWith("?="))
   search(parm.substr(2));
-else
-  load(parm.substr(1));
+else{ 
+  load(parm.startsWith("?")?parm.substr(1):parm);
 
+}
 function load(file) {
   if (file == null || file == "" || file == "/" || !(new RegExp("^.+?\.md$").test(file)))
-    file = "README.md"
+    file = "README.md";
 
   fetch(root + "/" + file)
     .then(function (response) {
@@ -55,7 +56,7 @@ function load(file) {
 function search(parm) {
   initSearch();
   if (null != parm && parm.trim() != "") {
-
+    document.getElementById("text").value = parm;
     var api = "https://api.github.com/search/code?q=" + parm + "+in:file+repo:" + repo + "+extension:md";
     fetch(api, {
       headers: {
@@ -107,7 +108,7 @@ function initSearch() {
   con.innerHTML = `
   <div class="so">
       <div class="in">
-          <input type="text" id="text" maxlength="2048" autofocus="autofocus" placeholder="🐱‍🚀🐱‍🚀🐱‍🚀">
+          <input type="text" id="text" maxlength="2048" autofocus="autofocus" placeholder="🐱‍🚀">
       </div>
       <div class="sub" id="sub"></div>
   </div>
